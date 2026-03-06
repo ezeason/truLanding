@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science of Nutrition | Join the Network</title>
+    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+    <style>
+        /* Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        body { background-color: #050505; color: #ffffff; overflow-x: hidden; }
+
+        /* Main Hero Grid */
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile Default */
+            min-height: 100vh;
+            align-items: center;
+            background: #050505;
+        }
+
+        /* Image Containers */
+        .side-img {
+            display: none; /* Hidden on mobile to focus on text */
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);
+        }
+
+        /* Female - Left (Toned Belly, no face/feet) */
+        .img-left {
+            background-image: url('https://images.unsplash.com');
+        }
+
+        /* Male - Right (Toned, facing left, shirtless) */
+        .img-right {
+            background-image: url('https://images.unsplash.com');
+        }
+
+        /* Center Content Column */
+        .content-column {
+            padding: 40px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        h1 b {
+            display: block;
+            color: #fff;
+            font-weight: 800;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Email Form */
+        .form-box {
+            background: rgba(20, 20, 20, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #333;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #111;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .cta-btn {
+            width: 100%;
+            padding: 18px;
+            background: #f3f3f3;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: #27ae60;
+            color: #fff;
+        }
+
+        /* Desktop & Tablet Layout */
+        @media (min-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1.2fr 2fr 1.2fr; /* 3-Column Layout */
+            }
+            .side-img { display: block; }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 1023px) {
+            .hero-container {
+                background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                            url('https://images.unsplash.com');
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="hero-container">
+        <!-- Left Side Image -->
+        <div class="side-img img-left"></div>
+
+        <!-- Center Content -->
+        <div class="content-column">
+            <h1>
+                <b>Want To Learn The Science Behind:</b>
+                <Staying Straight,<br>Effective Peptide Absorption,<br>Enhanced Nutrient Uptake,<br>Burning Fat and More...
+            </h1>
+
+            <div class="form-box">
+                <form>
+                    <!-- <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit" class="cta-btn">SEND ME THE SCIENCE</button> -->
+                    <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+                            <div class="formkit-field">
+                                <input class="formkit-input" name="email_address" aria-label="Email Address" 
+                                    placeholder="Email Address" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;">
+                            </div>
+                            <div class="formkit-field">
+                                <input class="formkit-input" aria-label="Name" name="fields[first_name]" required="" placeholder="Name" type="text" 
+                                    style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;">
+                            </div>
+                            <button data-element="submit" class="cta-btn" 
+                                style="color: rgb(255, 255, 255); background-color: rgb(244, 156, 63); border-radius: 4px; font-weight: 400;">
+                                <div class="formkit-spinner">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <span class="">SEND ME THE SCIENCE</span>
+                            </button>
+                        </div>
+
+                            </form>
+                        </div>
+                    </div>
+            
+        <!-- Right Side Image -->
+        <div class="side-img img-right"></div>
+    </main>
+
+</body>
+</html>
