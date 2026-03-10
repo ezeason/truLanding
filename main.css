@@ -1,0 +1,134 @@
+        /* Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        body { background-color: #050505; color: #ffffff; overflow-x: hidden; }
+
+        /* Main Hero Grid */
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile Default */
+            min-height: 100vh;
+            align-items: center;
+            background: #050505;
+        }
+
+        /* Image Containers */
+        .side-img {
+            display: none; /* Hidden on mobile to focus on text */
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);
+        }
+
+        /* Female - Left (Toned Belly, no face/feet) */
+        .img-left {
+            background-image: url('https://images.unsplash.com');
+        }
+
+        /* Male - Right (Toned, facing left, shirtless) */
+        .img-right {
+            background-image: url('https://images.unsplash.com');
+        }
+
+        /* Center Content Column */
+        .content-column {
+            padding: 40px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        h1 b {
+            display: block;
+            color: #fff;
+            font-weight: 800;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            line-height: 1.2;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+        .title {
+            font-size: clamp(2.2rem, 4vw, 4.8rem);
+            color: #c29604;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .title2 {
+            font-size: clamp(1.2rem, 2vw, 2.5rem);
+            color: #c29604;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        /* Email Form */
+        .form-box {
+            background: rgba(20, 20, 20, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #333;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #111;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .cta-btn {
+            width: 100%;
+            padding: 18px;
+            background: #f3f3f3;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: #27ae60;
+            color: #fff;
+        }
+
+        /* Desktop & Tablet Layout */
+        @media (min-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1.2fr 2fr 1.2fr; /* 3-Column Layout */
+            }
+            .side-img { display: block; }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 1023px) {
+            .hero-container {
+                background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                            url('https://images.unsplash.com');
+                background-size: cover;
+            }
+        }
